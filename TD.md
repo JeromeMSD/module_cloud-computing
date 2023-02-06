@@ -96,7 +96,7 @@ Utilisez `curl` pour demander des calculs et récupérer le résultat.
 
 ### Queue
 
-![WIP](https://img.shields.io/badge/WIP-FA7343?style=for-the-badge&logoColor=white)
+[![WIP](https://img.shields.io/badge/WIP-FA7343?style=for-the-badge&logoColor=white)](https://www.youtube.com/watch?v=VBlFHuCzPgY)
 
 ### Implémenter une interface utilisateur
 
