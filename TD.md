@@ -37,8 +37,9 @@ Concevoir une API simple ( Python/Flask ou Rust ).
 La calculatrice doit permettre les **additions**, les **soustractions**, les **multiplications** et les **divisions**.
 
 Pour demander ces calcules :
-● `POST` &nbsp;: Envoyer un tuple pour demander un calcul ( renvoie un id ).
-● `GET`  &emsp;: Récupérer le résultat via un id.
+
+* `POST` &nbsp;: Envoyer un tuple pour demander un calcul ( renvoie un id ).
+* `GET`  &emsp;: Récupérer le résultat via un id.
 
 Pour l'instant, les résultats sont stockés dans une variable dictionnaire.
 
