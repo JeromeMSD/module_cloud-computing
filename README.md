@@ -18,4 +18,4 @@ Et ça ce passe ici 👉 [TD](TD.md)
 
 Les travaux pratiques seront également consacré à la réalisation d'un seul projet : un rixe entre Microservices !
 
-Et ça ce passe ici 👉 [Projet noté](Projet.md)
+Et ça ce passe ici 👉 [Projet noté](SUJET_PROJET.md)
