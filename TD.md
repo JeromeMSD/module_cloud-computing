@@ -2,7 +2,7 @@
 
 Vous allez réaliser une **Calculatrice Cloud** !
 
-Le projet de CI/CD étant un [![](https://img.shields.io/badge/PROJET_TERMINÉ_🚀-059142?style=for-the-badge&logoColor=white)](https://dev.to/envoy_/150-badges-for-github-pnk) 
+Le projet de CI/CD étant un [![badge](https://img.shields.io/badge/PROJET_TERMINÉ_🚀-059142?style=for-the-badge&logoColor=white)](https://dev.to/envoy_/150-badges-for-github-pnk)
 
 Vous avez maintenant toutes les clés pour la réalisation de ce premier petit projet !
 
@@ -29,7 +29,7 @@ A partir des échanges que nous avons eu en cours concernant la calculatrice dan
 
 ### Comme un goût de CI/CD
 
-![](https://img.shields.io/badge/python-059142?style=for-the-badge&logo=python&logoColor=white) ![](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![python](https://img.shields.io/badge/python-059142?style=for-the-badge&logo=python&logoColor=white) ![rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 
 Concevoir une API simple ( Python/Flask ou Rust ).
 ℹ️ Vous pouvez reprendre le projet du module précédent en base.
@@ -55,7 +55,7 @@ curl -X POST/GET -h localhost:PORT -d "tuple={}"
 
 ### Externaliser la donnée
 
-**L’API peut tomber 😱**
+#### L’API peut tomber 😱
 
 Et que se soit par contrainte produit ou *par goût de la chose bien faite* :
 On ne va pas perdre toutes les demande de calcule pour un calcul impossible !
@@ -80,7 +80,7 @@ Enfin utilisez [redis-cli](https://redis.io/docs/ui/cli/) pour accéder à redis
 Connectons maintenant l’API à la Redis
 Documentation 👉 [python et redis](https://pypi.org/project/redis/)
 
-```python 
+```python
 import redis
 r = redis.Redis(host='localhost', port=6379, db=0)
 
