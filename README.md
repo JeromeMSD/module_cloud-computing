@@ -16,6 +16,6 @@ Et ça ce passe ici 👉 [TD](TD.md)
 
 ## Travaux pratiques 🕹️
 
-Les travaux pratiques seront également consacré à la réalisation d'un seul projet : un rixe entre Microservices !
+Les travaux pratiques seront également consacré à la réalisation d'un seul projet : refaire Twitter !
 
 Et ça ce passe ici 👉 [Projet noté](SUJET_PROJET.md)
