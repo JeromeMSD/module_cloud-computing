@@ -1,15 +1,14 @@
-# Projet noté
-
 [🇺🇸 - 🇬🇧 English version](project.md)
 
 ||||
 :--- | :---: | :---:
-[![uB](img/UB.png)](https://u-bourgogne.fr/) | ESIREM - 4A - ILC/SQR <br/> Cloud computing <br/> **[ EXAMEN PRATIQUE ]** | [![ESIREM](img/ESIREM.png)](https://esirem.u-bourgogne.fr/)
-|| Ce projet à rendre au plus tard le <br/> `7 avril 2023 à 23h59` ||
+[![uB](img/UB.png)](https://u-bourgogne.fr/) | ESIREM - 4A - ILC/SQR <br/> Cloud computing <br/><br/> **[ EXAMEN PRATIQUE ]** | [![ESIREM](img/ESIREM.png)](https://esirem.u-bourgogne.fr/)
+|| Projet à rendre au plus tard le `7 avril 2023 à 23h59` ||
 
-## Sommaire
+Sommaire
+---
 
-* [Sujet](#exigences-pour-le-projet)
+* [Sujet du projet](#sujet-du-projet)
 * [Exigences projet](#exigences-pour-le-projet)
 
 ---
@@ -18,16 +17,19 @@ Le projet noté du module de Cloud computing évaluera compétences et bonnes pr
 
 ---
 
-## Sujet
+# Sujet du projet
 
-Nous allons refaire
-[![Twitter](https://logos-world.net/wp-content/uploads/2020/05/Twitter-Logo-2010.png)](https://twitter.com)
+[![Twitter](https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Twitter_logo.svg/2560px-Twitter_logo.svg.png)](https://twitter.com)
 
-### Déroulé
+<br/>
 
-#### Faire place net
+Au cours de ce projet nous allons réaliser les différentes composantes microservices permettant de refaire le SaaS **Twitter** ☝️
 
-Utiliser le dépôt de TD. ( vous pouvez le renommer si besoin )
+## Déroulé du projet
+
+### Faire place net
+
+Utilisez le dépôt de TD. ( vous pouvez le renommer si besoin )
 Déplacez votre travail de TD ( fichiers, dossiers et README.md ) dans un dossier du même nom à la racine du dépôt.
 
 Créez un nouveau README.md à la racine du projet qui servira de rapport pour le projet avec pour l’instant membres du groupe.
@@ -43,9 +45,13 @@ Chacun d’eux contenant un **README** spécifique et un **Dockerfile** permetta
 
 > Pas de `swagger.yaml` pour ce projet.
 
-#### API
+---
 
-Concevoir une API simple ( `Python/Flask`, `Node` ou `Rust` ).
+### API 🚀
+
+L'API c'est le cerveau de votre SaaS, une interface programmable qui permet de réaliser des traitements. Les requêtes envoyé à l'API sont traiter et de l'information est retourné pour informer ou répondre à la demande l'utilisateur. Que ce soit via un outil comme `curl` ou caché dans les fonctions javascript d'un `frontend`, l'envoie de requête à l'API permet de commander des traitements pour utiliser ses fonctionnalités.
+
+Concevoir une API simple ( `Python/Flask`, `Node` ou `Rust` ). Elle permettra de répondre aux fonctionnalités suivantes :
 
 * Afficher tous les tweets.
 * Enregistrer un tweet dans Redis.
@@ -54,28 +60,33 @@ Concevoir une API simple ( `Python/Flask`, `Node` ou `Rust` ).
 * Afficher les sujets.
 * Afficher les tweets liés à un sujet.
 
+Via la déclaration de route `GET` et `POST` vous définirez les fonctions pour répondre aux fonctionnalités si dessus ☝️
+
+#### Gestion des hashtags
+
+Gérer les sujets peut se faire en créant une clé dédiée au sujet dans le dictionnaire des utilisateurs.
+
+*Par exemple* : Vous pouvez utiliser des un préfix pour éviter les conflits de clé. Par exemple, les utilisateurs auront une clé au format `u-username` et les sujets `h-hashtag`.
+
+> **[ Tips ]** Pour trier les liens entre sujets, utilisateurs et tweets tout se fera au traitement de la requête.
+
+ℹ️ vous pouvez utilisez un autre format, votre choix est à préciser dans le readme.
+
+#### Gestion des objets
+
+L'envoie et le retour de données dans les requêtes et les reponses `HTTP` peut être simplfié via l'utilisation de structure [`JSON`](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation). Vous pourrez gérer vos traitements et/ou transformation de donnée ou de message dans les routes de votre API.
+
 > **[ Tips ]** Avant de mettre en place les bases Redis, vous pouvez utiliser des dictionnaires pour tester vos routes et vos fonctionnalités.
 
 Testez vos routes avec la commande `curl`.
 
-[![WIP](https://img.shields.io/badge/WIP-FA7343?style=for-the-badge&logoColor=white)](https://www.youtube.com/watch?v=VBlFHuCzPgY)
+---
 
-##### Gestion des sujets
-
-Tout simplement en créant une clé dédiée au sujet dans la table des utilisateurs.
-⇒ Gérez les sujets comme des utilisateurs !
-
-Vous pouvez utiliser des un préfix pour éviter les conflits de clé. Par exemple, les utilisateurs auront une clé au format u-username et les sujets h-hashtag. 
-
-ℹ️ vous pouvez utilisez un autre format, précisez le dans le readme
-
-> **[ Tips ]** Pour trier les liens entre sujets, utilisateurs et tweets tout se fera au traitement de la requête.
-
-#### Redis
+### Redis
 
 Pour externaliser le stockage et garantir leurs concervations en cas redémarrage de l'API, le tout dans une base rapide et sans contrainte vous utiliserez `redis`.
 
-##### Qu'est ce que Redis
+#### Qu'est ce que Redis
 
 `Redis` est une base de donnée clé/valeur qui vous permettra de stocker de la donnée sous forme de dictionnaire.
 
@@ -91,26 +102,32 @@ docker run --name myredis -p 6379:6379 redis
 
 Si vous stockiez vos tweets dans une variable dictionnaire vous pouvez maintenant la remplacer par un stockage dans le serveur `redis`.
 
-##### Stocker les tweets via Redis
+#### Stocker les tweets via Redis
 
 Vous stockerez les messages dans deux bases Redis.
 
 Une base contenant les tweets.
-*ex:* `key=timestamp, value=’{“author”: “username”, “tweet”: ”message”}’`
+
+*exemple :* `key=timestamp, value=’{“author”: “username”, “tweet”: ”message”}’`
+
 Une base contenant les utilisateurs dans laquelle la clé sera le nom d’utilisateur et en valeur la liste des clés de ses tweets.
-*ex:* `key=username, value=[timestamp_1, timestamp_2, timestamp_3]`
+
+*exemple :* `key=username, value=[timestamp_1, timestamp_2, timestamp_3]`
 
 L'architecture ci-dessus est un exemple. Vous êtes libre de choisir une autre architecture, mais elle doit fonctionner 😉
 
-#### Tout est dans le détail 🧐
+---
+
+### Tout est dans le détail 🧐
 
 Il ne manque plus que l’interface utilisateur !
 
-Avec la technologie de votre choix ( `HTML/CSS/JS`, `Node`, `VueJS`, `React`… ) réalisé un `frontend` pour communiquer avec votre API. Via boutons et formulaires, il permettra d’appeler les différentes routes de votre API et de mettre en forme les retours de l’API.
+Avec la technologie de votre choix ( `HTML/CSS/JS`, `Node`, `VueJS`, `React`… ) réalisé un `frontend` pour communiquer avec votre API. Via boutons et formulaires, il permettra d’appeler les différentes routes de votre API et de mettre en forme leurs retours.
 
-Laissez libre court à vos envies et votre imagination pour designer votre Twitter, la forme importe peu mais elle devrait **couvrir toutes fonctionnalités de l’API** décrite dans la section [API](#api) 🚀
+Laissez libre court à vos envies et votre imagination pour designer votre Twitter, la forme importe peu mais elle devrait **couvrir toutes fonctionnalités de l’API** décrite dans la section [API](#api-🚀)
 
 ℹ️ N’oubliez pas le **Dockerfile** pour permettre le lancement du frontend dans un conteneur.
+
 ℹ️ Vous décrivez les fonctionnalités du `frontend` dans le **README.md** de son dossier.
 
 ---
@@ -147,3 +164,7 @@ Vous rendrez votre code via un dépôt GitHub, auquel vous m’aurez ajouté en 
 ### Interface utilisateur
 
 * Détail des fonctionalités couvertes dans le **README frontend**.
+
+### API backend
+
+* Détail des fonctionalités couvertes dans le **README backend**.
