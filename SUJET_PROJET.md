@@ -53,9 +53,10 @@ L'API c'est le cerveau de votre SaaS, une interface programmable qui permet de r
 
 Concevoir une API simple ( `Python/Flask`, `Node` ou `Rust` ). Elle permettra de répondre aux fonctionnalités suivantes :
 
+* Twetter.
 * Afficher tous les tweets.
-* Enregistrer un tweet dans Redis.
-* Attribuer un tweet à une personne.
+* Enregistrer les tweets dans Redis.
+* Afficher les tweets liés à une personne.
 * Retweeter.
 * Afficher les sujets.
 * Afficher les tweets liés à un sujet.
