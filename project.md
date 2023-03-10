@@ -52,6 +52,7 @@ The API is a brain for your SaaS, an application programming interface which rea
 
 Implement a simple API ( `Python/Flask`, `Node` or `Rust` ). Which allow to perform following features using `GET` and `POST` HTTP method :
 
+* Tweet.
 * Display tweets.
 * Save a tweet ( in `Redis` ).
 * Display tweets of a user.
