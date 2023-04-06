@@ -3,7 +3,7 @@
 
 [![uB](img/UB.png)](https://u-bourgogne.fr/) | ESIREM - 4A - ILC/SQR <br/> Cloud computing <br/><br/> **[ EXAMEN PRATIQUE ]** | [![ESIREM](img/ESIREM.png)](https://esirem.u-bourgogne.fr/)
 :--- | :---: | ---:
-|| À rendre au plus tard le `7 avril 2023 à 23h59` ||
+|| À rendre au plus tard le `10 avril 2023 à 23h59` ||
 
 Sommaire
 ---
