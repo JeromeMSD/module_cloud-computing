@@ -109,5 +109,4 @@ Tout d’abord **Félicitation !** Vous avez fini le sujet principal.
 **Une seul consigne :**
 Créer un frontend qui permet à l’utilisateur de saisir et d’envoyer des demandes de calcul à l’API.
 
-> Tips : vous pouvez utiliser le bon vieux combo **HTML/CSS/JS**
-> &emsp; &emsp;&emsp;ou ChatGPT ( pour gagner du temps uniquement 😉)
+> Tips : vous pouvez utiliser le bon vieux combo **HTML/CSS/JS** ou ChatGPT ( pour gagner du temps uniquement 😉)
