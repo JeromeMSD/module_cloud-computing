@@ -3,7 +3,7 @@
 
 [![uB](img/UB.png)](https://u-bourgogne.fr/) | ESIREM - 4A - ILC/SQR <br/> Cloud computing <br/><br/> **[ EXAMEN PRATIQUE ]** | [![ESIREM](img/ESIREM.png)](https://esirem.u-bourgogne.fr/)
 :--- | :---: | ---:
-|| À rendre au plus tard le `10 avril 2023 à 23h59` ||
+|| À rendre au plus tard le `11 mars 2024 à 23h59` ||
 
 Sommaire
 ---
@@ -19,11 +19,11 @@ Le projet noté du module de Cloud computing évaluera compétences et bonnes pr
 
 # Sujet du projet
 
-[![Twitter](https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Twitter_logo.svg/2560px-Twitter_logo.svg.png)](https://twitter.com)
+[![Twitter](https://f.hellowork.com/blogdumoderateur/2023/07/X-Twitter-Logo-origine.jpg)](https://x.com)
 
 <br/>
 
-Au cours de ce projet nous allons réaliser les différentes composantes microservices permettant de refaire le SaaS **Twitter** ☝️
+Au cours de ce projet nous allons réaliser les différentes composantes microservices permettant de refaire le SaaS **X ( ancien Twitter )** ☝️
 
 ## Déroulé du projet
 
