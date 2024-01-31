@@ -2,7 +2,7 @@
 
 [![uB](img/UB.png)](https://u-bourgogne.fr/) | ESIREM - 4A - ILC/SQR <br/> Cloud computing <br/><br/> **[ PRATIQUE EXAM ]** | [![ESIREM](img/ESIREM.png)](https://esirem.u-bourgogne.fr/)
 :--- | :---: | ---:
-|| End of project set at `April 10, 2023 at 11:59pm` ||
+|| End of project set at `March 11th, 2024 at 11:59pm` ||
 
 Table of content
 ---
@@ -18,11 +18,11 @@ Practice exam for CI/CD module will evaluate skills and development good practic
 
 # Project's topic
 
-[![Twitter](https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Twitter_logo.svg/2560px-Twitter_logo.svg.png)](https://twitter.com)
+[![Twitter](https://f.hellowork.com/blogdumoderateur/2023/07/X-Twitter-Logo-origine.jpg)](https://x.com)
 
 <br/>
 
-Throughout this project, you're gonna implement microservices components to remake **Twitter** SaaS ☝️
+Throughout this project, you're gonna implement microservices components to remake **X ( ex-Twitter )** SaaS ☝️
 
 ## Project's steps
 
