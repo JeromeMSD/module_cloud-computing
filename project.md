@@ -1,6 +1,6 @@
 [🇫🇷 Version française](SUJET_PROJET.md)
 
-[![uB](img/UB.png)](https://u-bourgogne.fr/) | ESIREM - 4A - ILC/SQR <br/> Cloud computing <br/><br/> **[ PRATIQUE EXAM ]** | [![ESIREM](img/ESIREM.png)](https://esirem.u-bourgogne.fr/)
+[![uB](img/UB.png)](https://u-bourgogne.fr/) | ESIREM - 4A - ILC/SQR <br/> Cloud computing <br/><br/> **[ PRACTICE EXAM ]** | [![ESIREM](img/ESIREM.png)](https://esirem.u-bourgogne.fr/)
 :--- | :---: | ---:
 || End of project set at `March 11th, 2024 at 11:59pm` ||
 
