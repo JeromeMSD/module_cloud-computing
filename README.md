@@ -14,8 +14,6 @@ Les travaux dirigés seront consacré à la réalisation d'un seul sujet : une c
 
 Et ça ce passe ici 👉 [TD](TD.md)
 
-## Travaux pratiques 🕹️
+## Projet 🕹️
 
-Les travaux pratiques seront également consacré à la réalisation d'un seul projet : refaire Twitter !
-
-Et ça ce passe ici 👉 [Projet noté](SUJET_PROJET.md)
+[![WIP](https://img.shields.io/badge/WIP-FA7343?style=for-the-badge&logoColor=white)](https://www.youtube.com/watch?v=VBlFHuCzPgY)
