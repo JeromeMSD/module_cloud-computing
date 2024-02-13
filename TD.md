@@ -95,9 +95,36 @@ Remplacer le stockage précédemment en variable par un stockage via **Redis**
 
 Utilisez `curl` pour demander des calculs et récupérer le résultat.
 
-### Queue
+### Gerer les messages avec des Queues
 
-[![WIP](https://img.shields.io/badge/WIP-FA7343?style=for-the-badge&logoColor=white)](https://www.youtube.com/watch?v=VBlFHuCzPgY)
+
+Les queues sont les stars des architectures Cloud Native !
+
+Pour traiter des messages de façon ordonnée, faire de la rétention de données (bufferisé) ou encore répartir un flux de messages entre différentes charges de travail. Elles sont donc implémentées par la plupart des CSPs.
+
+> CSP = Cloud Service Provider ( Fournisseur de Service Cloud )
+
+On peut les utiliser au format de service managé ou bien en les installant directement sous forme de serveur dans notre architecture ou, comme dans cet exercice, sur notre machine.
+
+#### Démarrons un serveur de queues dans un conteneur
+
+[![](https://img.shields.io/badge/rabbitmq-%23FF6600.svg?&style=for-the-badge&logo=rabbitmq&logoColor=white)](https://rabbitmq.com/)
+
+Dans un nouveau terminal, démarrez un conteneur [**RabbitMQ**](https://rabbitmq.com/) qui servira de serveur de queues.
+
+```bash
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12-management
+```
+
+Le serveur est installé, il ne reste qu'à tester et pour les tests c'est ici ! 👉 [ RabbitMQ Hello World ](https://rabbitmq.com/tutorials/tutorial-one-python.html)
+
+Réalisez le **TP Hello World de RabbitMQ !**, vous y créerez un créateur et un consomateur de message ( Producer / Consumer ).
+
+> **[ DEFI ]** Utilisez une queue pour ordonner les calculs de votre calculatrice ! 
+>
+>* *METHODE N°1 -* L'interface utilisateur enverra maintenant le message dans la queue directement et l'API s'abonnera à cette queue pour récupérer les opérandes.
+>
+>* *METHODE N°2 -* L'API reçoit le calcul à effectuer, créer un message avec opérateur et opérandes et le place dans la queue. Une autre fonction vient récupérer le calcul et le réaliser.
 
 ### Implémenter une interface utilisateur
 
