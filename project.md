@@ -2,7 +2,7 @@
 
 [![uB](img/UB.png)](https://u-bourgogne.fr/) | ESIREM - 4A - ILC/SQR <br/> Cloud computing <br/><br/> **[ PRACTICE EXAM ]** | [![ESIREM](img/ESIREM.png)](https://esirem.u-bourgogne.fr/)
 :--- | :---: | ---:
-|| End of project set at `March 11th, 2024 at 11:59pm` ||
+|| End of project set at `March 13th, 2024 at 11:59pm` ||
 
 Table of content
 ---
@@ -28,7 +28,7 @@ Throughout this project, you're gonna implement microservices components to rema
 
 ### Pre cleanning 
 
-Use you directed work repository. ( can be renamed if needed ) 
+Use you directed work repository. ( can be renamed if needed )
 Move your previous work ( files, folders and README.md ) to a folder `TD` at root of repository.
 
 Create a new README.md file at root.
@@ -93,7 +93,7 @@ Use `Redis` as database start in a container on your device. It can be access us
 In a other prompt, start `redis` foreground using the following command :
 
 ```bash
-docker run --name myredis -p 6379:6379 redis
+docker run --name myredis -p 6379:6379 --rm redis
 ```
 
 > Tips : use `redis-cli` tool to access to `redis` directly without `python` script.
@@ -132,7 +132,7 @@ Let your imagination run wild when designing your Twitter, display doesn't matte
 
 ## Project requirements
 
-End of project is set at `7 avril 2023 à 23h59`.
+End of project is set at `March 13th, 2024 at 11:59pm`.
 
 > No changes on repository or in the code will be considered after this date
 

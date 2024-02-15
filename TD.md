@@ -68,7 +68,7 @@ Utiliser Redis comme serveur de données, c’est un système de stockage **clé
 
 ```bash
 # À exécuter dans un autre terminal.
-docker run -p 6379:6379 --name myredis redis
+docker run -p 6379:6379 --name myredis --rm redis
 ```
 
 Oui, on pourrait utiliser `-d` pour lancer le conteneur en mode `detached` mais dans un terminal on peut voir les logs, pratique pour débuguer ! 🧐

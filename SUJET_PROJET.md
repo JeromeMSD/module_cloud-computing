@@ -3,7 +3,7 @@
 
 [![uB](img/UB.png)](https://u-bourgogne.fr/) | ESIREM - 4A - ILC/SQR <br/> Cloud computing <br/><br/> **[ EXAMEN PRATIQUE ]** | [![ESIREM](img/ESIREM.png)](https://esirem.u-bourgogne.fr/)
 :--- | :---: | ---:
-|| À rendre au plus tard le `11 mars 2024 à 23h59` ||
+|| À rendre au plus tard le `13 mars 2024 à 23h59` ||
 
 Sommaire
 ---
@@ -96,7 +96,7 @@ Vous utiliserez Redis comme serveur de données, lancé dans un conteneur sur vo
 Dans un autre terminal vous pouvez lancer `redis` frontalement via la commande :
 
 ```bash
-docker run --name myredis -p 6379:6379 redis
+docker run --name myredis --rm -p 6379:6379 redis
 ```
 
 > Tips : utilisez l'outil `redis-cli` pour accéder à `redis` directement sans script `python`.
@@ -135,7 +135,7 @@ Laissez libre court à vos envies et votre imagination pour designer votre Twitt
 
 ## Exigences pour le projet
 
-Ce projet à rendre au plus tard le `7 avril 2023 à 23h59`.
+Ce projet à rendre au plus tard le `13 mars 2024 à 23h59`.
 
 > À partir de cette date, aucune modification du dépôt ou de code ne sera prise en compte.
 
