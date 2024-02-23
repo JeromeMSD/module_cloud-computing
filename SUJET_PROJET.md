@@ -69,7 +69,8 @@ Gérer les sujets peut se faire en créant une clé dédiée au sujet dans le di
 
 *Par exemple* : Vous pouvez utiliser des un préfix pour éviter les conflits de clé. Par exemple, les utilisateurs auront une clé au format `u-username` et les sujets `h-hashtag`.
 
-> **[ Tips ]** Pour trier les liens entre sujets, utilisateurs et tweets tout se fera au traitement de la requête.
+> [!TIPS]
+> Pour trier les liens entre sujets, utilisateurs et tweets tout se fera au traitement de la requête.
 
 ℹ️ vous pouvez utilisez un autre format, votre choix est à préciser dans le readme.
 
@@ -77,7 +78,8 @@ Gérer les sujets peut se faire en créant une clé dédiée au sujet dans le di
 
 L'envoie et le retour de données dans les requêtes et les reponses `HTTP` peut être simplifié via l'utilisation de structure [`JSON`](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation). Vous pourrez gérer vos traitements et/ou transformation de donnée ou de message dans les routes de votre API.
 
-> **[ Tips ]** Avant de mettre en place les bases Redis, vous pouvez utiliser des dictionnaires pour tester vos routes et vos fonctionnalités.
+> [!TIPS]
+> Avant de mettre en place les bases Redis, vous pouvez utiliser des dictionnaires pour tester vos routes et vos fonctionnalités.
 
 Testez vos routes avec la commande `curl`.
 
@@ -133,10 +135,25 @@ Laissez libre court à vos envies et votre imagination pour designer votre Twitt
 
 ---
 
+### RabbitMQ ( Bonus ) 
+
+> [!NOTE]
+> Section facultative sur les serveurs de queues, offre un bonus de **2 points** si réalisée.
+
+Nous allons optimiser le temps de réponse de l'API en séparant l'ajout de tweet du traitement des sujets ( **#hashtags** ) dans une charge de travail différentes de l'API.
+
+Ajouter un serveur RabbitMQ à votre architecture, dans un conteneur séparé comme réalisée en TD.
+
+A chaque nouveau tweet, un message contenant l'identifiant du tweet sera ajouté dans la queue. Un *consumer* viendra consommer les messages de la queue.
+Pour chaque message, le *consumer* récupère l'identifiant dans le message, il va récupérer le tweet dans la DB Redis et effectue le traitement lié au hastags.
+
+---
+
 ## Exigences pour le projet
 
 Ce projet à rendre au plus tard le `13 mars 2024 à 23h59`.
 
+> [!WARNING]
 > À partir de cette date, aucune modification du dépôt ou de code ne sera prise en compte.
 
 ### GitHub
@@ -146,7 +163,7 @@ Vous rendrez votre code via un dépôt GitHub, auquel vous m’aurez ajouté en 
 * L’historique des changements sur le dépôt devra montrer la collaboration entre les membres du groupe ( changement de sources différentes sur les fichiers projet ).
 * Une GitHub Action à chaque `push` pour vérifier `build` la syntaxe l'API pour vérifier l'intgrité du code (*cf. projet CI/CD*).
 * Le dépôt devra être documenté via 3 READMEs : un pour le `frontend`, un pour le `backend` et un global à la racine du dépôt.
-* Le README principal contiendra les noms des **membres du groupe**, le **déroulé du projet**, les **technologies utilisées**, des **badges**, des badges de **résultats de l'exécution des CIs** et la **procédure** pour exécuter les composantes du projet.
+* Le README principal contiendra les noms des **membres du groupe**, le **déroulé du projet**, les **technologies utilisées**, des **badges**, des badges de **résultats de l'exécution des CIs**, la **procédure** pour exécuter les composantes du projet ainsi qu'un schéma de votre architecture microservice.
 
 > Vous n'avez pas à réaliser de `swagger.yaml` pour ce projet.
 
@@ -155,7 +172,8 @@ Vous rendrez votre code via un dépôt GitHub, auquel vous m’aurez ajouté en 
 * Un Dockerfile pour construire l'API (`backend`).
 * Un Dockerfile pour construire le `frontend` si vous utilisez `Node`, `React` ou `VueJs`.
 
-> **[ Tips ]** Si vous utilisez du `HTML/CSS/JS` utilisez un Dockerfile `nginx`.
+> [!TIPS]
+> Si vous utilisez du `HTML/CSS/JS` utilisez un Dockerfile `nginx`.
 
 ### Redis
 
