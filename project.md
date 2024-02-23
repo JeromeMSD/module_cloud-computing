@@ -66,7 +66,8 @@ Topics can be managed by creating topic dedicated key in author dictionnary.
 
 *For example* : You can prefix to avoid conflict and overwriting of keys. Say `u-username` for users and `h-hashtag` for topics.
 
-> **[ Tips ]** To filter and sorts hashtags, users and tweets, use the corresponding endpoint function.
+> [!TIPS]
+> To filter and sorts hashtags, users and tweets, use the corresponding endpoint function.
 
 ℹ️ Use can implement your own format for topics, users and tweet management, precise your choice in README file.
 
@@ -74,7 +75,8 @@ Topics can be managed by creating topic dedicated key in author dictionnary.
 
 To send and return data between fronend and API, HTTP requests and responses can be simplified using [`JSON`](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation) structures. You will be able to treat or transform data or message through API endpoint's functions.
 
-> **[ Tips ]** Before using directly `Redis` you can use dictionnary variables to tests your endpoints and associated features. 
+> [!TIPS]
+> Before using directly `Redis` you can use dictionnary variables to tests your endpoints and associated features. 
 
 Test your endpoints with `curl` command.
 
@@ -130,10 +132,25 @@ Let your imagination run wild when designing your Twitter, display doesn't matte
 
 ---
 
+### RabbitMQ ( Bonus ) 
+
+> [!NOTE]
+> Optional section on queue servers, offers a bonus of **2 points** if completed.
+
+We want to optimize the response time of the application. To do so we will resolve hashtags of tweets aside from the API container.
+
+Add a RabbitMQ server to your architecture using a side container as we did with the calculator.
+
+For each new tweet, its `id` will be put in a queue message. A *consumer* script will consume these messages.
+For each message, the *consumer* gets the tweet from Redis using the `id` and then resolve and store hashtags.
+
+---
+
 ## Project requirements
 
 End of project is set at `March 13th, 2024 at 11:59pm`.
 
+> [!WARNING]
 > No changes on repository or in the code will be considered after this date
 
 ### GitHub
@@ -152,7 +169,8 @@ You must store your code in a GitHub repository where you've added my as collabo
 * One Dockerfile to build API (`backend`).
 * One Dockerfile to build `frontend` if you're using `Node`, `React` or `VueJs`.
 
-> **[ Tips ]** If you're using `HTML/CSS/JS` use a `nginx` Dockerfile.
+> [!TIPS]
+> If you're using `HTML/CSS/JS` use a `nginx` Dockerfile.
 
 ### Redis
 
